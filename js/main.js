@@ -30,10 +30,7 @@
 		    target =   elementType + '.' + elClass;
 		   
 
-		// console.log(elClass);
-		// console.log(elementType);
-		// console.log(target);
-		console.log(fontPathOutput);
+		// console.log(fontPathOutput);
 
 		var fontValuePixels = getComputedStyle(document.querySelector(fontPathOutput), ':before').getPropertyValue('font-size'),
 			fontValue = parseInt(fontValuePixels, 10);
@@ -47,7 +44,7 @@
         if( (fontValue < 22)){
         	$this.addClass('small-font');
         } 	
-		console.log(getComputedStyle(document.querySelector(fontPathOutput), ':before').getPropertyValue('font-size'));
+		// console.log(getComputedStyle(document.querySelector(fontPathOutput), ':before').getPropertyValue('font-size'));
 	});
 
 
