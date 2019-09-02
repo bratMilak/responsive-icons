@@ -38,25 +38,36 @@ html {
 .icon-Responsive_icon-small:before {
   content: "\e900"; }
 
-.icon-holder {
+.icons-holder {
   padding: 20px 30px; }
-  .icon-holder p {
-    margin-bottom: 25px;
-    font-size: 24px;
-    color: #d40dcc; }
-    .icon-holder p:before {
-      margin-right: 10px; }
 
-p.icon-big {
-  font-size: 60px;
-  font-family: 'experimenta-big'; }
+p {
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #d40dcc; }
+  p:before {
+    margin-right: 10px;
+    font-family: 'experimenta-small'; }
 
-p.icon-medium {
-  font-size: 30px;
-  font-family: 'experimenta-medium'; }
+p.icon-big:before {
+  font-size: 60px; }
 
-p.icon-small {
-  font-size: 12px;
-  font-family: 'experimenta-small'; }
+p.icon-medium:before {
+  font-size: 30px; }
+
+p.icon-small:before {
+  font-size: 15px; }
+
+.test p.icon-small:before {
+  font-size: 55px; }
+
+.big-font:before {
+  font-family: 'experimenta-big' !important; }
+
+.med-font:before {
+  font-family: 'experimenta-medium' !important; }
+
+.small-font:before {
+  font-family: 'experimenta-small' !important; }
 
 

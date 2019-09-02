@@ -61,40 +61,64 @@ html {
   content: "\e900";
 }
 
-.icon-holder {
+.icons-holder {
 	padding: 20px 30px;
-	p {
-		margin-bottom: 25px;
-		font-size: 24px;
-		color: #d40dcc;
-		&:before {
-			margin-right: 10px;
-		}
+}
+p {
+	margin-bottom: 25px;
+	font-size: 24px;
+	color: #d40dcc;
+	&:before {
+		margin-right: 10px;
+		font-family: 'experimenta-small';
 	}
 }
 
-@mixin use-font-size($size) {
-    @if ($size <= 20px) {
-        font-size: $size;
-        font-family: 'experimenta-small';
-    }
-    @if ($size >= 21px and $size <= 50px) {
-        font-size: $size;
-        font-family: 'experimenta-medium';
-    } 
-    @if ($size >= 51px) {
-        font-size: $size;
-        font-family: 'experimenta-big';
-    }
+// @mixin use-font-size($size) {
+//     @if ($size <= 20px) {
+//         font-size: $size;
+//         font-family: 'experimenta-small';
+//     }
+//     @if ($size >= 21px and $size <= 50px) {
+//         font-size: $size;
+//         font-family: 'experimenta-medium';
+//     } 
+//     @if ($size >= 51px) {
+//         font-size: $size;
+//         font-family: 'experimenta-big';
+//     }
+// }
+
+
+
+// alternate pure CSS without mixin
+p.icon-big:before {
+	font-size: 60px;
+	// font-family: 'experimenta-big';
+}
+p.icon-medium:before {
+	font-size: 30px;
+	// font-family: 'experimenta-medium';
+}
+p.icon-small:before {
+	font-size: 15px;
+	// font-family: 'experimenta-small';
+}
+
+// Overwritten by parent
+.test p.icon-small:before {
+	font-size: 55px;
+}
+
+// Js Class
+.big-font:before {
+	font-family: 'experimenta-big' !important;
+}
+.med-font:before {
+	font-family: 'experimenta-medium' !important;
+}
+.small-font:before {
+	font-family: 'experimenta-small' !important;
 }
 
 
-p.icon-big {
-	@include  use-font-size(60px);
-}
-p.icon-medium {
-	@include  use-font-size(30px);
-}
-p.icon-small {
-	@include  use-font-size(12px);
-}
